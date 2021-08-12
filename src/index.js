@@ -6,9 +6,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+// let retries=5;
+// while(retries){
+//   try{
+//        createConnection();
+
+//   }catch(err){
+
+//   }
+// }
+
 app.use("/dev", require("./routes/dev.js"));
 app.get("/v1", (req, res) => {
-  res.send("hello");
+  res.send("helldo");
 });
 
 app.listen(3001, () => {
